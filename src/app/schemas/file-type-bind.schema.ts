@@ -11,7 +11,7 @@ export class FileTypeBind {
   @Prop({ required: true })
   data: [
     {
-      filesTypesId: { type: String };
+      fileTypeId: { type: String };
       deleted: { type: Boolean };
     },
   ];

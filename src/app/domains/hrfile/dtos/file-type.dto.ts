@@ -1,12 +1,12 @@
-export interface HrFileDTO {
-  id: string;
+export interface HrFileTypeDTO {
+  id?: string;
   name: string;
 }
 
 export interface HrFileBindDTO {
   employeeId: string;
   data: {
-    filesTypesId: string;
+    fileTypeId: string;
     deleted?: boolean
   }[];
 }
