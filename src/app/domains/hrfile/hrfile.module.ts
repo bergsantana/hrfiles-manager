@@ -4,10 +4,10 @@ import { HRFile, HRFileSchema } from 'src/app/schemas/hr-file.schema';
 import { HrFileController } from './hrfile.controller';
 import { HrFileService } from './hrfile.service';
 import { FileType, FileTypeSchema } from 'src/app/schemas/file-type.schema';
-import {
-  FileTypeBind,
-  FileTypeBindSchema,
-} from 'src/app/schemas/file-type-bind.schema';
+// import {
+//   FileTypeBind,
+//   FileTypeBindSchema,
+// } from 'src/app/schemas/file-type-bind.schema';
 
 @Module({
   imports: [
@@ -20,10 +20,10 @@ import {
         name: FileType.name,
         schema: FileTypeSchema,
       },
-      {
-        name: FileTypeBind.name,
-        schema: FileTypeBindSchema,
-      },
+    //   {
+    //     name: FileTypeBind.name,
+    //     schema: FileTypeBindSchema,
+    //   },
     ]),
   ],
   controllers: [HrFileController],

@@ -7,11 +7,9 @@ export type FileTypeDocument = HydratedDocument<FileType>;
 
 @Schema()
 export class FileType {
-  @Prop({ required: true, default: uuidv4() })
-  id: string;
 
-  @Prop({ required: true })
-  name: string;
+  @Prop({ required: true, unique: true })
+  documentName: string;
 }
 
 export const FileTypeSchema = SchemaFactory.createForClass(FileType);

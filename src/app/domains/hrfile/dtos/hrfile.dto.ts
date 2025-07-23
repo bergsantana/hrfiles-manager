@@ -1,11 +1,23 @@
 export interface HrFileDTO {
-  name: string;
+  name?: string;
 
-  employeedId: string;
+  employeeId: string;
 
   hrFileTypeId: string;
 
   status?: string;
-  
-  base64FileString?: string;
+
+  fileBase64?: string;
+}
+
+export interface SearchFilesDTO {
+  status: 'PENDING' | 'SENT';
+
+  page: number;
+
+  pageSize: number;
+
+  employeeId?: string;
+
+  hrFileTypeId?: string;
 }
