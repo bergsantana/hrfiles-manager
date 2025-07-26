@@ -46,8 +46,8 @@ Comece o servidor com:
 #### [x] Tratamento de Erros: como você trataria os erros da sua aplicação?
  Incluso log e retorno de mensagens de error para debug
 #### [x] Documentação do Sistema: sua aplicação provavelmente precisa ser construída antes de ser executada. Você consegue documentar como outra pessoa que pegou sua aplicação pela primeira vez pode construir e executa-la?
- Incluso Documentação Swagger com instruções de uso e endpoints(ListAll para empregados e documentos) para facilitar      
+ Incluso Documentação Swagger com instruções de uso e endpoints(ListAll para empregados e documentos) para facilitar, no link abaixo      
 #### [x] Deploy: você consegue realizar o deploy da sua aplicação?
- Deploy em AWS EC2 aqui https://107.23.226.95:3355/hr-files-manager/api
+ Deploy em AWS EC2 aqui http://107.23.226.95:3355/hr-files-manager/api/docs
  
   
