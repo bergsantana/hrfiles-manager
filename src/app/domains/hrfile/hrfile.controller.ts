@@ -38,7 +38,7 @@ export class HrFileController {
   }
 
   @Get('get-documentation-status')
-  async getDocumentationStatus(@Query('employeeId') employeeId: string) {
+  async getDocumentationStatus(@Query('employee-id') employeeId: string) {
     return this.hrFileService.getAllDocumentationStatus(employeeId);
   }
 

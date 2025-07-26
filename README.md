@@ -94,7 +94,8 @@ Comece o servidor com:
 #### [x] Testes automatizados: 
  Incluso Unit Testing com Jest
 #### [x] Tratamento de Erros: como você trataria os erros da sua aplicação?
- Incluso log e retorno de mensagens de error para debug
+ Incluso log e retorno de mensagens de error para debug com:
+ ``` npm run test ```
 #### [x] Documentação do Sistema: sua aplicação provavelmente precisa ser construída antes de ser executada. Você consegue documentar como outra pessoa que pegou sua aplicação pela primeira vez pode construir e executa-la?
  Incluso Documentação Swagger com instruções de uso e endpoints(ListAll para empregados e documentos) para facilitar, no link abaixo      
 #### [x] Deploy: você consegue realizar o deploy da sua aplicação?
