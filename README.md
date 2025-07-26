@@ -8,7 +8,7 @@ Clone esse repo:
 - ` git clone https://github.com/bergsantana/hrfiles-manager.git`
 
 Da pasta raiz:
-- `npm install   --legacy-peer-deps`
+- `npm install --legacy-peer-deps`
 Edite .env.development como queira
 
 Instale MongoDb ou se voce usa Docker use:
@@ -21,19 +21,69 @@ Comece o servidor com:
 ## Requerimentos
 - Adicione o prefixo da sua maquina local: localhost:3355 ou como você configurar
 ### Cadastro de colaborador
-- POST para `/hr-files-manager/api/employee/register/`
+- POST para `/hr-files-manager/api/employee/register/` com objeto:
+```
+   [
+    {
+        "name": "José Maria",
+        "cpf": "129.456.789-00",
+        "hiredAt": "2021-01-15"
+    }
+  ]
+ ```
+ 
 ### Cadastro de tipo de documento
- - PATCH para `/hr-files-manager/api/employee/update`
+ - PATCH para `/hr-files-manager/api/employee/update` com objeto:
+```
+[
+    {
+        "name": "José Maria Editado",
+        "cpf": "129.446.712-00",
+        "hiredAt": "2021-01-15"
+    }
+ 
+]
+```
 ### Cadastro de tipo de documento
-  - POST para `/hr-files-manager/api/hrfile/register-type`
+  - POST para `/hr-files-manager/api/hrfile/register-type`, exemplo:
+```
+[
+  { "documentName": "Carteira de Trabalho" },
+  { "documentName": "RG" },
+  { "documentName": "CPF" },
+]
+```
 ### Vinculação e desvinculação de um colaborador com tipos de documentos
   - Deve ser possível vincular e desvincular mais de um tipo de documento por vez
   - POST para `/hr-files-manager/api/hrfile/save-biding-file-employee`
+  - ex:
+```
+[
+    {
+        "employeeId": "688137db08012ed3d428c9ba",
+        "hrFileTypeId": "688137dd08012ed3d428c9c0",
+        "name": "cpf digital do gov br.pdf",
+        "fileBase64": ""
+    } 
+]
+```
 ### Enviar um documento relacionado ao tipo de documento e ao colaborador
   - POST para `/hr-files-manager/api/hrfile/save-biding-file-employee`
   - Preencher o atributo "fileBase64" com um representação do documento
+```
+[
+    {
+        "employeeId": "688137db08012ed3d428c9ba",
+        "hrFileTypeId": "688137dd08012ed3d428c9c0",
+        "name": "cpf digital do gov br.pdf",
+        "fileBase64": ""
+    } 
+]
+```
+ 
 ### Obter o status da documentação de um colaborador específico, mostrando quais foram enviados e quais ainda estão pendentes de envio
    - GET para `/hr-files-manager/api/hrfile/get-documentation-status?employeeId=id do colaborador`
+   - parametro: employee
 ### Listar todos os documentos pendentes de todos os colaboradores
    - GET para `/hr-files-manager/api/hrfile/find-all-pending?page=1&page-size=10&employee-id= id do colaborador &file-id= id do documento`
    - id do colaborador e id do documento são opcionais

@@ -7,15 +7,15 @@ export type EmployeeDocument = HydratedDocument<Employee>;
 
 @Schema()
 export class Employee {
-  @ApiProperty({ example: 'Julia José'})
+  @ApiProperty({ example: 'Julia José' })
   @Prop({ required: true })
   name: string;
 
-  @ApiProperty({ example: '123.123.123-15'})
-  @Prop({ required: true })
+  @ApiProperty({ example: '123.123.123-15' })
+  @Prop({ required: true, unique: true })
   cpf: string;
 
-  @ApiProperty({ example: '28/02/1984'})
+  @ApiProperty({ example: '28/02/1984' })
   @Prop({ required: true, default: new Date().toLocaleString('pt-BR') })
   hiredAt: string;
 }

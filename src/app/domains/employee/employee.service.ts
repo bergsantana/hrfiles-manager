@@ -27,11 +27,11 @@ export class EmployeeService {
 
   async update(employeeData: updateEmployeeDTO[]) {
     for (const currentEmployee of employeeData) {
-      const { id, cpf, name, hiredAt } = currentEmployee;
+      const { _id, cpf, name, hiredAt } = currentEmployee;
 
       const hiredDate = formatDateToPtBr(hiredAt);
       await this.employeeModel.findOneAndUpdate(
-        { id },
+        { _id },
         { cpf, name, hiredAt: hiredDate },
       );
     }

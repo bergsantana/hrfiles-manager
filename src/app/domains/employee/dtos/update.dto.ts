@@ -1,5 +1,5 @@
 export interface updateEmployeeDTO {
-  id: string;
+  _id: string;
   name: string;
   cpf: string;
   hiredAt: string;
