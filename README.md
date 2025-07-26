@@ -92,10 +92,10 @@ Comece o servidor com:
  #### Bonus Points:
 
 #### [x] Testes automatizados: 
- Incluso Unit Testing com Jest
-#### [x] Tratamento de Erros: como você trataria os erros da sua aplicação?
- Incluso log e retorno de mensagens de error para debug com:
+ Incluso Unit Testing com Jest:
  ``` npm run test ```
+#### [x] Tratamento de Erros: como você trataria os erros da sua aplicação?
+ Incluso log e retorno de mensagens de error para debug  
 #### [x] Documentação do Sistema: sua aplicação provavelmente precisa ser construída antes de ser executada. Você consegue documentar como outra pessoa que pegou sua aplicação pela primeira vez pode construir e executa-la?
  Incluso Documentação Swagger com instruções de uso e endpoints(ListAll para empregados e documentos) para facilitar, no link abaixo      
 #### [x] Deploy: você consegue realizar o deploy da sua aplicação?
