@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Employee } from 'src/app/schemas/employee.schema';
@@ -19,6 +19,10 @@ export class EmployeeService {
     return await this.employeeModel.findOne({
       id,
     });
+  }
+
+  async findAll() {
+    return await this.employeeModel.find();
   }
 
   async update(employeeData: updateEmployeeDTO[]) {
