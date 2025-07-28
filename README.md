@@ -32,18 +32,7 @@ Comece o servidor com:
   ]
  ```
  
-### Cadastro de tipo de documento
- - PATCH para `/hr-files-manager/api/employee/update` com objeto:
-```
-[
-    {
-        "name": "José Maria Editado",
-        "cpf": "129.446.712-00",
-        "hiredAt": "2021-01-15"
-    }
- 
-]
-```
+
 ### Cadastro de tipo de documento
   - POST para `/hr-files-manager/api/hrfile/register-type`, exemplo:
 ```
